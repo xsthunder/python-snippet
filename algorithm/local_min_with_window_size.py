@@ -15,6 +15,7 @@ def local_min_from_left(sum_over_height, window_size=None):
     if not isinstance(sum_over_height, np.ndarray):sum_over_height = np.array(sum_over_height)
     assert sum_over_height.ndim == 1
     if window_size == None:window_size = 50
+    average = sum_over_height.sum()/len(sum_over_height)
     _min = max(sum_over_height)
     _x = 0
     width = len(sum_over_height)
@@ -22,6 +23,7 @@ def local_min_from_left(sum_over_height, window_size=None):
         # 滑动，有效窗口[ _x-window_size, _x+window_size,]
 #         print(x)
         if _x + window_size < x :break # 滑动出界，不得更新
+        # if _min < average and _x + window_size < x :break # 要求局部最小值比平均值小，滑动出界，不得更新
         if _min > sum_over_height[x]:
             _min, _x = sum_over_height[x], x
     return _min, _x
