@@ -1,0 +1,53 @@
+import os
+import re
+import random
+import copy
+from collections import Counter
+try:
+    import cPickle as pickle
+except ImportError:
+    import pickle
+import gc
+    
+
+import numpy as np
+from numpy.random import seed
+seed(1000)
+from tensorflow.random import set_random_seed
+set_random_seed(1000)
+
+import pandas
+from pandas import Series, DataFrame
+
+import keras
+import keras.backend as K
+# from keras.layers import Layer
+from keras.engine import Layer
+from keras.engine import InputSpec
+from keras.preprocessing.text import Tokenizer
+from keras.utils.np_utils import to_categorical
+from keras.layers import Input, Embedding, Conv1D, Concatenate, Flatten, Dropout, Dense, Bidirectional, Activation, GRU
+from keras.layers import MaxPooling1D, Conv2D, Flatten, Reshape, MaxPooling2D, LSTM, Lambda, Highway, Dot, Permute, Add
+from keras.models import Model, Sequential
+from keras.activations import softmax
+from keras.initializers import Constant, RandomNormal, RandomUniform
+
+import tensorflow as tf
+import keras.backend.tensorflow_backend as KTF
+
+import matplotlib.pyplot as plt
+
+from scipy import stats
+from scipy.stats import  norm
+from sklearn.preprocessing import StandardScaler
+import warnings
+warnings.filterwarnings('ignore')
+
+#进行配置，使用30%的GPU
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+config = tf.ConfigProto()
+config.gpu_options.per_process_gpu_memory_fraction = 1
+session = tf.Session(config=config)
+
+# 设置session
+KTF.set_session(session )
