@@ -21,5 +21,5 @@ class Read:
 read = Read(True, """
 4 5
 """).read
-# input = read
+# read = input
 ri = lambda :map(int, read().split()) # read integer from one line
