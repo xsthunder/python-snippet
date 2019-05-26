@@ -13,16 +13,17 @@ class Read:
         i = self.i
         l = self.l
         if i == len(l):
-            print('Warn: relocate i')
+            print('Warning: relocate i')
             self.i = 0
             return self.read()
         self.i = i + 1
         return l[i]
 read = Read(True, """
-4 5
+6 4
+-10 8 2 1 2 6
 """).read
 input = read
 
 # in your code
-read = input
-ri = lambda :map(int, read().split()) # read integer from one line
+read = input 
+rn = lambda :list(map(int, read().split()))
