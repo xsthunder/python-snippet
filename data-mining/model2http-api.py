@@ -22,3 +22,18 @@ def save_model_to_serving(model, export_version, export_path='model/'):
         legacy_init_op=legacy_init_op)
     builder.save()
 save_model_to_serving(good_naive, "1", './save_to_serving') # save to different directory according to the second params indicating version
+
+import requests
+import json
+payload = {
+    "instances": [
+        {
+        "img_input": img_input_1.tolist(), #x_val[0][0].tolist(),
+        "extra_input": extra_input_1.tolist(), # x_val[1][0].tolist(),
+    }
+    ]
+}
+url = 'http://example.com/predict'
+r = requests.post(, json=payload)
+pred = json.loads(r.content.decode('utf-8'))
+pred
