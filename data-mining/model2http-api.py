@@ -34,6 +34,6 @@ payload = {
     ]
 }
 url = 'http://example.com/predict'
-r = requests.post(, json=payload)
+r = requests.post(url, json=payload)
 pred = json.loads(r.content.decode('utf-8'))
 pred
