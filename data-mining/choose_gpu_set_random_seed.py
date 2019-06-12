@@ -1,6 +1,6 @@
 GPU_ID = "1" # start from 0
 TF_SEED_NUMBER = 1000
-NP_SEED_NUMBER = TF_SEED_NUMBER
+NP_SEED_NUMBER = TF_SEED_NUMBER # performance may still changes
 GPU_MEMORY_FRACTION = 1
 
 import os
