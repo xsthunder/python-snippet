@@ -9,8 +9,9 @@ import random
 import numpy as np
 from numpy.random import seed
 seed(NP_SEED_NUMBER)
-from tensorflow.random import set_random_seed
-set_random_seed(TF_SEED_NUMBER)
+# 包通常不存在，设了还是会变化
+# from tensorflow.random import set_random_seed 
+# set_random_seed(TF_SEED_NUMBER)
 
 import keras
 import keras.backend as K
