@@ -1,7 +1,7 @@
 GPU_ID = "1" # start from 0
 TF_SEED_NUMBER = 1000
 NP_SEED_NUMBER = TF_SEED_NUMBER # performance may still changes
-GPU_MEMORY_FRACTION = 1
+GPU_MEMORY_FRACTION = 0.3 #进行配置，使用30%的GPU
 
 import os
 import random
@@ -17,7 +17,6 @@ import keras.backend as K
 import tensorflow as tf
 import keras.backend.tensorflow_backend as KTF
 
-#进行配置，使用30%的GPU
 os.environ["CUDA_VISIBLE_DEVICES"] = GPU_ID
 config = tf.ConfigProto()
 config.gpu_options.per_process_gpu_memory_fraction =  GPU_MEMORY_FRACTION
