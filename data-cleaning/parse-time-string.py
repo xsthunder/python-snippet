@@ -1,3 +1,4 @@
+# feel free to parse string of time
 # conda install python-dateutil
 # @see https://dateutil.readthedocs.io/en/stable/
 import dateutil.parser
