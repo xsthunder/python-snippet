@@ -2,8 +2,9 @@ import os
 OUTPUT_DIR='input3'
 output_dir = OUTPUT_DIR
 all_data_dir = DATA_DIR
-column_name = ['path', '序号', 'level', 'position']
+column_name = ['path', 'level', 'position']
 output_list = []
+index_list = []
 for subdir, dirs, files in os.walk(all_data_dir):
     category_name = os.path.basename(subdir)
     for file in files:
@@ -13,7 +14,10 @@ for subdir, dirs, files in os.walk(all_data_dir):
         index = m.group(1) # id
         level = m.group(2) # level
         position = m.group(3) # position
-        output_list.append([input_file, index, level, position])
+        path = input_file[len('../../input-image-dmsa2vur/'):]
+        output_list.append([path, index, level, position])
+        index_list.append(index)
 
         
-file_df=pd.DataFrame(output_list, columns=column_name)
+file_df=pd.DataFrame(output_list, columns=column_name, index=index_list)
+file_df.index.name = '序号'
