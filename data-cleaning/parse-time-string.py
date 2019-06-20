@@ -11,5 +11,6 @@ def  per_row(r):
     end_time = row.get(END_TIME)
     start_time = parse(start_time)
     end_time = parse(end_time)
+    # generates n date obj, recursively in range, we can get the diff of the day by counting it
     return rrule.rrule(rrule.YEARLY, dtstart=start_time, until=end_time).count()
 list(map(per_row, df.iterrows()))
