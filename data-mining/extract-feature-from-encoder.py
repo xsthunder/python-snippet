@@ -19,7 +19,7 @@ def extract_feature(directory):
     )
     i = 0
     for inputs_batch, labels_batch in datagenerator:
-        features_batch = conv_base.predict(inputs_batch)
+        features_batch = conv_base.predict(inputs_batch) # wherever your model
         features[i * batch_size:((i+1)*batch_size)] = features_batch
         labels[i * batch_size:((i+1)*batch_size)] = labels_batch
         i += 1
