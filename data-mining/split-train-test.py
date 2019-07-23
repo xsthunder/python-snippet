@@ -1,9 +1,10 @@
+y_column_name = '0,1~5'
+SKLEAN_RAMDOM_SEED=20190619
 from sklearn.model_selection import train_test_split
-train_img_X,test_img_X, train_extra_X, test_extra_X, train_label,  test_label, = train_test_split(
-                                     img_feature,
-                                    extra_feature,
-                                     labels,
+df = df_all.copy()
+train_df, test_df = train_test_split(
+                                    df,
                                    test_size = 0.3, 
-                                   random_state = 2018,
-                                   stratify = df['level']
+                                   random_state = SKLEAN_RAMDOM_SEED,
+                                   stratify = df[y_column_name]
                                     )
