@@ -3,7 +3,7 @@ from sklearn.metrics import classification_report
 # scores, output of models
 # y_true
 
-y_pred = scores >= best_threshold
+y_pred = scores >= best_threshold # roc_curve is using threshold with greater or equal to
 
 print(metrics.classification_report(y_true=y_true, y_pred=y_pred))
 
