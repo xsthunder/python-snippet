@@ -1,6 +1,7 @@
 # 运行
 
 https://github.com/xsthunder/LatticeLSTM
+本地 `jupyter-ws/example-git/LatticeLSTM-pycharm-y50` 数据`jupyter-ws/example-git/CCKS-Data-Use`
 
 ## TODO
 
