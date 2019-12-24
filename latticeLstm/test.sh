@@ -1,3 +1,4 @@
+# 输出decode test/dev 的结果 以及 ground-truth 结果，调用seqeval.sh
 set -e
 num=$1
 if test -z $num 
