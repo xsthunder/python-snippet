@@ -8,7 +8,10 @@ from seqeval.metrics import classification_report
 from seqeval.metrics import f1_score
 from seqeval.metrics import precision_score
 
-files = sys.argv[1:]
+# TODO 
+# check argv length
+
+filename = sys.argv[1]
 
 def run(filename):
 	print('------------------       %s      ---------------'%filename)
@@ -29,5 +32,5 @@ def run(filename):
 	report = classification_report(y_true, y_pred)
 	print(report)
 
-for filename in files:
-	run(filename)
+
+run(filename)
