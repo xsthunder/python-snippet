@@ -3,9 +3,8 @@
 
 
 draw two chart in one pic 
-[HMM_CRF_torch/CRF.ipynb at master · xsthunder/HMM_CRF_torch](https://github.com/xsthunder/HMM_CRF_torch/blob/master/nb/CRF.ipynb)
 ----------
-
+[HMM_CRF_torch/CRF.ipynb at master · xsthunder/HMM_CRF_torch](https://github.com/xsthunder/HMM_CRF_torch/blob/master/nb/CRF.ipynb)
 ```python
 import matplotlib.pyplot as plt
 def pxy(x, y, name='idk', plt=plt, ):
