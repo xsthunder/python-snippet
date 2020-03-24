@@ -1,3 +1,9 @@
+torch.tensor
+----------
+tensor.tensor(1, requre_grad=True) # 需要grad的话，初始化就要设置
+tensor.tensor(1, dtype=Tensor.int64) # 而不是tensor.Tensor，可以看成工厂类
+
+
 torch.Tensor.item()
 --------
 获取scalar tensor的python值
