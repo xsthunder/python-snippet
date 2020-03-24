@@ -2,7 +2,9 @@
 
 ## setup.py
 
-[distutils - Including non-Python files with setup.py - Stack Overflow](https://stackoverflow.com/questions/1612733/including-non-python-files-with-setup-py)
+1. only a limited list of file will be automatically added, [distutils - Including non-Python files with setup.py - Stack Overflow](https://stackoverflow.com/questions/1612733/including-non-python-files-with-setup-py).
+
+2. only dir includes `__init__.py` will be recognized as packages and added to path.
 
 ## locally
 
