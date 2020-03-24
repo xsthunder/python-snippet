@@ -12,3 +12,9 @@ r = "\d+%s\d"%3
 r = re.compile(r)
 re.match(r, s)
 ```
+
+set break point
+-----
+```python
+import pdb; pdb.set_trace()
+````
