@@ -3,7 +3,7 @@ torch.Tensor.item()
 获取scalar tensor的python值
 ```python
 a = torch.tensor(1)
-a.item()
+a.item() # 1
 ```
 
 resumeNER
