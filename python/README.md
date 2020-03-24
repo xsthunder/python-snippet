@@ -1,7 +1,7 @@
 aysnc_subprocess
 -----------
 [rss-reborn/nbexp_watcher.py at master · xsthunder/rss-reborn](https://github.com/xsthunder/rss-reborn/blob/master/nb/nbexp_watcher.py)
-```
+```python
 # https://docs.python.org/3/library/asyncio-subprocess.html
 import asyncio
 import sys
