@@ -1,5 +1,7 @@
 # upload to pip
 
+## locally
+
 1. ~~before using auto deployment such as travis, manually upload the first version.~~
 1. setup `.pypirc` instead of `.piprc` see [Packaging and distributing projects — Python Packaging User Guide](https://packaging.python.org/guides/distributing-packages-using-setuptools/#create-an-account)
 1. build package
@@ -11,7 +13,7 @@
   1. when using interactive windows cmd for gem, it seems like pypi key were chunked. dont insert the pypi key in the middle of the command. input the command in sequence and double check the command using up arrow after excution.
   2. paste pypi key including `pypi-` prefix.
 
-build
+build and install
 -----
 ```ps
 # run by powershell
