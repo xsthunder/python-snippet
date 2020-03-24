@@ -1,5 +1,9 @@
 # upload to pip
 
+## setup.py
+
+[distutils - Including non-Python files with setup.py - Stack Overflow](https://stackoverflow.com/questions/1612733/including-non-python-files-with-setup-py)
+
 ## locally
 
 1. ~~before using auto deployment such as travis, manually upload the first version.~~
