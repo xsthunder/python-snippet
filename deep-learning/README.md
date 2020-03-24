@@ -1,3 +1,11 @@
+torch.Tensor.item()
+--------
+获取scalar tensor的python值
+```python
+a = torch.tensor(1)
+a.item()
+```
+
 resumeNER
 ----------
 `emb + lstm + home-made crf`
