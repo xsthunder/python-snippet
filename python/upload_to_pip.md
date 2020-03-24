@@ -7,7 +7,7 @@
 
 ## use travis delpoyment
 
-1. generate secure key for different repo [PyPI deployment - Travis CI](https://docs.travis-ci.com/user/deployment/pypi/). notes that may use the same pypi key, but secure key differs from different project or the current timestamp.
+1. generate secure key for different repo [PyPI deployment - Travis CI](https://docs.travis-ci.com/user/deployment/pypi/). notes that may use the same (global) pypi key, but secure key differs from different project or the current timestamp.
   1. when using interactive windows cmd for gem, it seems like pypi key were chunked. dont insert the pypi key in the middle of the command. input the command in sequence and double check using up arrow after excution.
   2. paste pypi key including `pypi-` prefix.
 
