@@ -1,4 +1,7 @@
-```
+rss-reborn/nbexp_watcher.py at master · xsthunder/rss-reborn
+https://github.com/xsthunder/rss-reborn/blob/master/nb/nbexp_watcher.py
+
+```python
 from datetime import datetime
 import sys
 def now():return mktime(datetime.now().timetuple())
