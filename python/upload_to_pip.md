@@ -38,7 +38,10 @@ $project_name=get-content ./config/project_name.txt
 
 pip uninstall $project_name -y
 python setup.py sdist bdist_wheel
+
+pip install .\dist\$project_name-$version.tar.gz # make sure it'd be complie by source code
 pip install .\dist\$project_name-$version-py3-none-any.whl
+
 
 ```
 
