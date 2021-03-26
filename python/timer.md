@@ -34,6 +34,6 @@ def timer(slient_mode = False):
     
     while True:
         t2 = now()
-        split_by_time( "total " + dt.__str__() + " spent")
+        split_by_time( "total " + (t2 - t1).__str__() + " spent")
         yield t2, t2 - t1
 ```
