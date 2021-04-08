@@ -16,7 +16,9 @@ output_ids_array[[(0), (0)]] # array([[1275],       [1275]])
 
 官方提示不适宜用argwhere结果做索引[The output of argwhere is not suitable for indexing arrays. For this purpose use nonzero(a) instead.](https://numpy.org/doc/stable/reference/generated/numpy.argwhere.html?highlight=argwhere#numpy.argwhere)
 
-用[numpy.nonzero](https://numpy.org/doc/stable/reference/generated/numpy.nonzero.html?highlight=nonzero)代替，返回的是c-like的索引列表`[[i_1的列表],[i_2的列表], [i_2的列表],]`
+用[numpy.nonzero](https://numpy.org/doc/stable/reference/generated/numpy.nonzero.html?highlight=nonzero)代替，返回的是c-like的索引列表`[[i_1的列表],[i_2的列表], [i_2的列表],]`，符合分维度切片的原理如`np.arange(9).reshape((3,3,))[::-1, ::-1]`。
+
+做好所以索引列表，传入，不能用`::`语法，同nonezero结果。
 
 Using a non-tuple sequence for multidimensional indexing is deprecated; 
 use `arr[tuple(seq)]` instead of `arr[seq]`. 
